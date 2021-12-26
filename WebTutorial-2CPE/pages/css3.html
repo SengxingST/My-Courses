@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Tutorial | 2CPE</title>
+
+  <style>
+    * {
+      color: black;
+    }
+    body {
+      background-color: white;
+      background-image: url("../img/pineapple.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: scroll;
+      background-size: 100px;
+
+      /*Background Shorthand*/
+      /*background: skyblue url("../img/pineapple.jpg") no-repeat right top fixed;*/
+    }
+    h1 {
+      background-color: red;
+      opacity: 0.5;
+    }
+    h1, h2, h3, h4 {
+      text-align: center;
+    }
+    p.solid   { border-style: solid; }
+    p.dotted  { border-style: dotted; }
+    p.dashed  { border-style: dashed; }
+    p.double  { border-style: double; }
+    p.groove  { border-style: groove; }
+    p.ridge   { border-style: ridge; }
+    p.inset   { border-style: inset; }
+    p.outset  { border-style: outset; }
+    p.none    { border-style: none; }
+    p.hidden  { border-style: hidden; }
+    p.mix     { border-style: solid dotted dashed double; }
+
+    p.one {
+      border-style: solid;
+      border-width: medium;
+      border-color: #40E0D0;
+    }
+    p.two {
+      border-style: solid;
+      border-width: thick;
+      border-color: rgb(64, 224, 208);
+    }
+    p.three {
+      border-style: solid;
+      border-width: 5px 10px;
+      border-color: yellow orange;
+    }
+    p.four {
+      border-style: solid;
+      border-width: 5px 5px 10px 10px;
+      border-color: red blue green yellow;
+    }
+    p.side {
+      border-top-style: solid;
+      border-right-style: dotted;
+      border-bottom-style: dashed;
+      border-left-style: double;
+      /*border-style: solid dotted dashed double;*/
+    }
+    p.shorthand { border: 5px solid #40E0D0; }
+    p.normal    { border: 5px solid red; }
+    p.round1 {
+      border: 5px solid red;
+      border-radius: 5px;
+    }
+    p.round2 {
+      border: 5px solid red;
+      border-radius: 8px;
+    }
+    p.round3 {
+      border: 5px solid red;
+      border-radius: 12px;
+    }
+    div.demo-margin {
+      border: 2px solid black;
+      margin-top: 50px;
+      margin-right: 20px;
+      margin-bottom: 50px;
+      margin-left: 20px;
+      /*margin: 100px 50px 100px 50px;*/
+      /*margin: auto;*/
+
+      padding-top: 5px;
+      padding-right: 20px;
+      padding-bottom: 5px;
+      padding-left: 20px;
+      /*padding: 10px 20px;*/
+
+      background-color: skyblue;
+    }
+    div   { margin-left: 100px; }
+    p.ex1 { margin-left: inherit; }
+    h1.h1 { margin: 0 0 50px 0; }
+    h2.h2 { margin: 20px 0 0 0; }
+
+
+  </style>
+
+</head>
+<body>
+
+  <h1>CSS Selectors</h1>
+
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+
+  <p style="color: red;">This is an inline CSS.</p>
+
+  <h1>CSS Border Styles</h1>
+  <p class="solid">Solid Borders</p>
+  <p class="dotted">Dotted Borders</p>
+  <p class="dashed">Dashed Borders</p>
+  <p class="double">Double Borders</p>
+  <p class="groove">Groove Borders</p>
+  <p class="ridge">Ridge Borders</p>
+  <p class="inset">Inset Borders</p>
+  <p class="outset">Outset Borders</p>
+  <p class="none">None Borders</p>
+  <p class="hidden">Hidden Borders</p>
+  <p class="mix">Mix Borders</p>
+
+  <h1>CSS Border Widths</h1>
+  <p class="one">Some Text.</p>
+  <p class="two">Some Text.</p>
+  <p class="three">Some Text.</p>
+  <p class="four">Some Text.</p>
+
+  <h1>CSS Border Sides</h1>
+  <p class="side">Some Text.</p>
+
+  <h1>CSS Border Shorthand</h1>
+  <p class="shorthand">Some Text.</p>
+
+  <h1>CSS Rounded Borders</h1>
+  <p class="normal">Normal Border.</p>
+  <p class="round1">Round Border.</p>
+  <p class="round2">Round Border.</p>
+  <p class="round3">Round Border.</p>
+
+  <h1>CSS Margins and Paddings</h1>
+  <div class="demo-margin">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit quidem voluptas magnam, laboriosam inventore modi porro deleniti eius similique temporibus necessitatibus ut aut asperiores itaque eveniet. Dignissimos, id nihil cum.</div>
+
+  <div>
+    <p class="ex1">Lorem ipsum dolor sit amet consectetur adipisicing   elit. Magni omnis provident.
+    </p>
+  </div>
+
+  <h1 class="h1">Heading 1</h1>
+  <h2 class="h2">Heading 2</h2>
+
+  <div style="margin-bottom: 800px;"></div>
+</body>
+</html>
