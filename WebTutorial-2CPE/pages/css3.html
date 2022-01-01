@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Tutorial | 2CPE</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon|Audiowide|Trirong" rel="stylesheet">
+
   <style>
     * {
       color: black;
@@ -97,10 +101,150 @@
 
       background-color: skyblue;
     }
-    div   { margin-left: 100px; }
-    p.ex1 { margin-left: inherit; }
+    /*div   { margin-left: 100px; }*/
+    p.demo-inherit { margin-left: inherit; }
     h1.h1 { margin: 0 0 50px 0; }
     h2.h2 { margin: 20px 0 0 0; }
+
+    div.h {
+      height: 150px;
+      /*width: 50%;*/
+      max-width: 400px;
+      border-color: red;
+      border-style: solid;
+    }
+    div.box-model {
+      background-color: powderblue;
+      width: 400px;
+      border: 3px solid red;
+      padding: 10px;
+      margin: 50px 20px;
+    }
+    p.outline {
+      border: 3px solid black;
+      outline: #4CAF50 solid 3px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h4 {outline-color:red;}
+    h4.dotted {outline-style: dotted;}
+    h4.dashed {outline-style: dashed;}
+    h4.solid  {outline-style: solid;}
+    h4.double {outline-style: double;}
+    h4.groove {outline-style: groove;}
+    h4.ridge  {outline-style: ridge;}
+    h4.inset  {outline-style: inset;}
+    h4.outset {outline-style: outset;}
+
+    p.ex1 {
+      border: 3px solid black;
+      outline-style: solid;
+      outline-color: tomato;
+      outline-width: thin;
+    }
+    p.ex2 {
+      border: 3px solid black;
+      outline-style: solid;
+      outline-color: tomato;
+      outline-width: medium;
+    }
+    p.ex3 {
+      border: 3px solid black;
+      outline-style: solid;
+      outline-color: tomato;
+      outline-width: thick;
+    }
+    p.ex4 {
+      border: 3px solid black;
+      /*outline-width: 5px;*/
+      /*outline-style: dashed;*/
+      /*outline-color: red;*/
+      outline: 5px dashed red;
+      background: skyblue;
+      outline-offset: 3px;
+    }
+    div.demo-text {
+      border: 2px solid grey;
+      padding: 8px;
+    }
+    div.demo-text h1 {
+      text-align: center;
+      text-transform: uppercase;
+      color: black;
+    }
+    div.demo-text p {
+      text-indent: 30px;
+      /*text-align: justify;*/
+      letter-spacing: 3px;
+      word-spacing: 3px;
+      line-height: 1.5;
+      /*white-space: nowrap;*/
+    }
+    div.demo-text a {
+      text-decoration: none;
+      color: #008CBA;
+    }
+    p.demo-directions {
+      direction: rtl;
+      /*unicode-bidi: bidi-override;*/
+    }
+
+    img.a { vertical-align: baseline; }
+    img.b { vertical-align: text-top; }
+    img.c { vertical-align: text-bottom; }
+    img.d { vertical-align: sub; }
+    img.e { vertical-align: super; }
+
+    p.decoration-ex1 { text-decoration: none; }
+    p.decoration-ex2 { text-decoration: overline; }
+    p.decoration-ex3 { text-decoration: line-through; }
+    p.decoration-ex4 { text-decoration: underline; }
+
+    p.uppercase  { text-transform: uppercase; }
+    p.lowercase  { text-transform: lowercase; }
+    p.capitalize { text-transform: capitalize; }
+
+    h1.shadow {
+      background-color: white;
+      text-shadow: 2px 2px 6px red;
+    }
+
+    p.font-ex1 { font-family: "Phetsarath OT"; }
+    p.font-ex2 {
+      font-family: "Ubuntu Mono";
+      font-style: normal;
+    }
+    p.font-ex3 {
+      font-family: "Source Code Pro for Powerline";
+      font-style: italic;
+    }
+    p.font-ex4 {
+      font-family: "mononoki Nerd Font";
+      font-style: oblique;
+    }
+
+    h1.large {
+      background-color: white;
+      color: black;
+      font-family: "Sofia";
+      /*text-shadow: 3px 3px 3px red;*/
+      text-align: left;
+      opacity: 1;
+      font-size: 50px;
+      /*font-size: 3.125em; 50px/16=em */
+      /*font-size: 10vw;*/
+    }
+    h2.medium {
+      text-align: left;
+      font-family: "Audiowide";
+      /*font-size: 30px;*/
+      font-size: 200%;
+    }
+    p.small {
+      font-size: 18px;
+      font-family: "Trirong";
+    }
 
 
   </style>
@@ -151,12 +295,85 @@
   <div class="demo-margin">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit quidem voluptas magnam, laboriosam inventore modi porro deleniti eius similique temporibus necessitatibus ut aut asperiores itaque eveniet. Dignissimos, id nihil cum.</div>
 
   <div>
-    <p class="ex1">Lorem ipsum dolor sit amet consectetur adipisicing   elit. Magni omnis provident.
+    <p class="demo-inherit">Lorem ipsum dolor sit amet consectetur adipisicing   elit. Magni omnis provident.
     </p>
   </div>
 
   <h1 class="h1">Heading 1</h1>
   <h2 class="h2">Heading 2</h2>
+
+  <h1>CSS Height/Width</h1>
+  <div class="h">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quisquam qui dolorem, repudiandae nihil, dicta minima officia ipsum ex nulla praesentium ab nemo ad cupiditate, natus veritatis eos earum laborum!</div>
+
+  <h1>CSS Box Model</h1>
+  <div class="box-model">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias doloribus commodi adipisci ab, hic sunt suscipit, porro, perspiciatis accusantium voluptatibus quidem, quo quos odit optio facere repellat ipsa aliquam?
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis minus sapiente nihil aspernatur, error? Molestiae corrupti molestias distinctio deleniti quis qui! Veniam adipisci nulla repellendus repudiandae, inventore nesciunt enim, accusamus.</div>
+
+  <h1>CSS Outline</h1>
+  <p class="outline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas recusandae delectus enim sapiente, quia aperiam architecto sequi consequatur labore omnis mollitia porro doloribus animi quo dolores quas minus non tempore.</p>
+
+  <h1>CSS Outline Style</h1>
+  <h4 class="solid">Solid Borders</h4>
+  <h4 class="dotted">Dotted Borders</h4>
+  <h4 class="dashed">Dashed Borders</h4>
+  <h4 class="double">Double Borders</h4>
+  <h4 class="groove">Groove Borders</h4>
+  <h4 class="ridge">Ridge Borders</h4>
+  <h4 class="inset">Inset Borders</h4>
+  <h4 class="outset">Outset Borders</h4>
+
+  <h1>CSS Outline Width</h1>
+  <p class="ex1">A thin Outline</p>
+  <p class="ex2">A medium Outline</p>
+  <p class="ex3">A thick Outline</p>
+  <p class="ex4">A specific Outline</p>
+
+  <h1>CSS Text</h1>
+  <div class="demo-text">
+    <h1>text transform</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus atque autem quo tempore quam laborum ex incidunt. Voluptate accusamus veniam dolorem exercitationem distinctio necessitatibus illo optio, inventore placeat accusantium non.
+    <a href="https:///www.google.com">Google</a>
+    </p>
+  </div>
+
+  <h1>CSS Text Directions</h1>
+  <p class="demo-directions">This is a paragraph. This is a paragrah.</p>
+
+  <p>An <img class="a" src="../img/img_tree.gif" alt="Image Tree" width="10" height="10"> image with a default alignment.</p>
+
+  <p>An <img class="b" src="../img/img_tree.gif" alt="Image Tree" width="10" height="10"> image with a top alignment.</p>
+
+  <p>An <img class="c" src="../img/img_tree.gif" alt="Image Tree" width="10" height="10"> image with a bottom alignment.</p>
+
+  <p>An <img class="d" src="../img/img_tree.gif" alt="Image Tree" width="10" height="10"> image with a subscript alignment.</p>
+
+  <p>An <img class="e" src="../img/img_tree.gif" alt="Image Tree" width="10" height="10"> image with a superscript alignment.</p>
+
+  <h1>CSS Text Decoration</h1>
+  <p class="decoration-ex1">This is a none text decoration.</p>
+  <p class="decoration-ex2">This is a overline text decoration.</p>
+  <p class="decoration-ex3">This is a line through text decoration.</p>
+  <p class="decoration-ex4">This is a underline text decoration.</p>
+
+  <h1>CSS Transformations</h1>
+  <p class="uppercase">This is an uppercase</p>
+  <p class="lowercase">This is a LOWERCASE</p>
+  <p class="capitalize">This is a capitalize</p>
+
+  <h1 class="shadow">Text Shadow</h1>
+
+  <h1>CSS Fonts</h1>
+  <p class="font-ex1">ສະບາຍດີເມືອງລາວ</p>
+  <p class="font-ex2">This is a ubuntu mono font</p>
+  <p class="font-ex3">This is a Source Code Pro for Powerline font</p>
+  <p class="font-ex4">This is a mononoki Nerd Font</p>
+
+  <h1>CSS Font Size</h1>
+  <h1 class="large font-effect-fire">Heading 1</h1>
+  <h2 class="medium font-effect-neon">Heading 2</h2>
+  <p class="small">This is a paragraph.</p>
+
+
 
   <div style="margin-bottom: 800px;"></div>
 </body>

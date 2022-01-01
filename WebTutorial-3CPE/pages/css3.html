@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3CPE | CSS3 Tutorial</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+  * {
+    color: black;
+  }
+  body {
+    background-color: #ffffff;
+    background-image: url("img_tree.gif");
+    /*background-repeat: repeat-x;*/
+    background-repeat: no-repeat;
+    background-position: right top;
+    /*background: #fff url("img_tree.gif") no-repeat right top;*/
+    background-attachment: fixed;
+  }
+  h1 {
+    color: black;
+    text-align: center;
+    /*background-color: tomato;*/
+    /*opacity: 0.8;*/
+    background-color: rgba(255, 99, 71, 0.8);
+  }
+  #header {
+    color: red;
+    text-align: center;
+  }
+  .center {
+    color: red;
+    text-align: center;
+  }
+
+  /* This is a comment */
+  #header, .center { /* This is a comment. */
+    color: red;
+    text-align: left;
+  }
+  p {
+    color: black;
+    text-align: left;
+  }
+  h3.center {
+    color: green;
+  }
+  h1.internal-css {
+    color: deepPink;
+  }
+  h1.external-css {
+    color: green;
+  }
+
+  </style>
+</head>
+
+<body>
+  <h1 id="header">CSS ID Selector.</h1>
+  <h1>CSS ID Selector.</h1>
+  <h3 class="center">CSS Class Selector.</h3>
+  <p>CSS Element Selector.</p>
+  <p class="center">CSS Class Selector.</p>
+  <p class="center">CSS Class Selector.</p>
+  <h2>CSS Universal Selector</h2>
+
+  <h1 style="color: orange;">Inline CSS</h1>
+  <h1 class="internal-css">Internal CSS</h1>
+  <h1 class="external-css" style="color: navy;">External CSS</h1>
+
+  <h1>HTML Colors</h1>
+  <p style="color: red;">Color Name</p>
+  <p style="color: rgb(255, 0, 0);">Color RGB</p>
+  <p style="color: rgba(255, 0, 0, 0.5);">Color RGBA</p>
+  <p style="color: #ff0000;">Color HEX</p>
+  <p style="color: hsl(0, 100%, 50%);">Color HSL</p>
+  <p style="color: hsla(0, 100%, 50%, 0.5);">Color HSLA</p>
+
+
+  <div style="margin-bottom: 500px;"></div>
+</body>
+
+</html>
