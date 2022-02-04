@@ -53,6 +53,154 @@
   h1.external-css {
     color: green;
   }
+  p.bg-color-demo {
+    background-color: lightblue;
+    opacity: 0.8;
+    /*background: rgba(0, 128, 0, 0.2);*/
+  }
+  div.bg-img-demo {
+    border: 2px solid red;
+    height: 500px;
+    background-image: url("../img/pineapple.jpg");
+    /*background-repeat: repeat-x;*/
+    /*background-repeat: repeat-y;*/
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  p.dotted {
+    border-style: dotted;
+    border-width: 3px;
+    /*border-width: small;*/
+    /*border-width: medium;*/
+    /*border-width: thick;*/
+  }
+  p.dashed {
+    border-style: dashed;
+    border-width: 3px;
+  }
+  p.solid  {
+    border-style: solid;
+    border-width: 3px;
+  }
+  p.double {
+    border-style: double;
+    border-width: 3px;
+  }
+  p.inset  {
+    border-style: inset;
+    border-width: 3px;
+  }
+  p.outset {
+    border-style: outset;
+    border-width: 3px;
+  }
+  p.groove {
+    border-style: groove;
+    border-width: 3px;
+  }
+  p.ridge  {
+    border-style: ridge;
+    border-width: 3px;
+  }
+  p.demo-border {
+    /*border-style: dashed solid dotted double;*/
+    border-top-style: dashed;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+
+    border-color: red green yellow blue;
+    /*border-width: 5px;*/
+    /*border-width: 5px 10px;*/
+    /*border-width: 5px 10px 20px;*/
+    border-width: 20px 10px 20px 30px;
+
+    border-radius: 10px;
+  }
+
+  div.demo-margin {
+    border: 3px solid red;
+    /*margin-top: 100px;*/
+    /*margin-bottom: 100px;*/
+    /*margin-right: 50px;*/
+    /*margin-left: 50px;*/
+    margin: 50px 20px;
+
+    /*padding-top: 10px;*/
+    /*padding-right: 5px;*/
+    /*padding-bottom: 10px;*/
+    /*padding-left: 5px;*/
+    padding: 10px 5px 10px 5px;
+  }
+
+  h1.demo-h1 {
+    background-color: white;
+    text-align: left;
+    margin: 0 0 50px 0;
+  }
+  h2.demo-h2 { margin: 20px 0 0 0 }
+
+  div.demo-h-w {
+    border: 3px solid green;
+    height: 200px;
+    /*width: 100%;*/
+    max-width: 500px;
+    background-color: powderblue;
+  }
+  div.demo-box-model {
+    border: 3px solid grey;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+  }
+  h2.demo-outline {
+    border: 5px solid blue;
+
+    outline-width: 5px;
+    outline-style: solid;
+    outline-color: red;
+    outline-offset: 5px;
+    /*outline: 10px solid red;*/
+  }
+  h2.demo-text {
+    background-color: lightgrey;
+    color: blue;
+    text-align: left;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  div.demo-text {
+    border: 3px solid tomato;
+    padding: 10px;
+    text-align: justify;
+  }
+  img.a { vertical-align: baseline; }
+  img.b { vertical-align: text-top; }
+  img.c { vertical-align: text-bottom; }
+  img.d { vertical-align: sub;   }
+  img.e { vertical-align: super; }
+
+  h2.demo-text-decoration { text-decoration: line-through; }
+
+  h2.uppercase  { text-transform: uppercase;  }
+  h2.lowercase  { text-transform: lowercase;  }
+  h2.capitalize { text-transform: capitalize; }
+  p.demo-text-spacing {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 1.5;
+  }
+  div.demo-white-space {
+    white-space: nowrap;
+  }
+  h2.demo-shadow {
+    text-shadow: 4px 4px 5px red;
+  }
+
 
   </style>
 </head>
@@ -70,13 +218,71 @@
   <h1 class="internal-css">Internal CSS</h1>
   <h1 class="external-css" style="color: navy;">External CSS</h1>
 
-  <h1>HTML Colors</h1>
+  <h1>CSS Colors</h1>
   <p style="color: red;">Color Name</p>
   <p style="color: rgb(255, 0, 0);">Color RGB</p>
   <p style="color: rgba(255, 0, 0, 0.5);">Color RGBA</p>
   <p style="color: #ff0000;">Color HEX</p>
   <p style="color: hsl(0, 100%, 50%);">Color HSL</p>
   <p style="color: hsla(0, 100%, 50%, 0.5);">Color HSLA</p>
+
+  <h1>CSS Background</h1>
+  <p class="bg-color-demo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci architecto est nihil voluptas non dolorum, quidem explicabo, vel soluta possimus, voluptatibus inventore incidunt praesentium numquam eaque repellendus libero iusto quaerat. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Vel, veniam nam modi optio soluta commodi ut quasi perspiciatis illo ipsam harum omnis repellat possimus reiciendis voluptatem totam quis, impedit, nihil!</p>
+
+  <div class="bg-img-demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates culpa doloremque impedit quas sed aperiam, accusantium. Inventore impedit vitae fugiat, dignissimos placeat voluptates ad? Neque harum suscipit blanditiis, minus ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem ea iste, assumenda numquam quos aliquid dicta, recusandae voluptate quas enim autem rerum et necessitatibus perferendis labore, sit corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, facilis iste fuga ipsum officia, dicta vel animi ipsam cupiditate aspernatur vitae optio corporis nobis, enim, autem pariatur natus? Consectetur, distinctio?</div>
+
+  <h1>CSS Borders</h1>
+  <p class="dotted">This is a dotted border style</p>
+  <p class="dashed">This is a dash border style</p>
+  <p class="solid">This is a solid border style</p>
+  <p class="double">This is a double border style</p>
+  <p class="inset">This is a inset border style</p>
+  <p class="outset">This is a outset border style</p>
+  <p class="groove">This is a groove border style</p>
+  <p class="ridge">This is a ridge border style</p>
+
+  <p class="demo-border">This is css border style</p>
+
+  <h1>CSS Margin</h1>
+  <div class="demo-margin">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Perferendis a hic fugiat ea tenetur doloremque, amet, inventore nihil debitis sed deserunt tempore recusandae! Iusto, voluptatibus? Nobis fugiat molestias consectetur aliquam.</div>
+  <p>This is a paragraph.</p>
+
+  <h1 class="demo-h1">Heading 1</h1>
+  <h2 class="demo-h2">Heading 2</h2>
+
+
+  <h1>CSS Height/Width</h1>
+  <div class="demo-h-w">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Necessitatibus, inventore, tempora. Magnam ad eum qui cupiditate rerum tempore, voluptatum fugiat fuga amet dolore dicta sint mollitia, aspernatur quae quidem porro?</div>
+
+  <h1>CSS Box Model</h1>
+  <div class="demo-box-model">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, cum eos amet quos culpa voluptatum, aspernatur doloremque nobis. Aperiam voluptatem exercitationem reprehenderit possimus iure? At fuga quod dignissimos est? Est. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus culpa cupiditate nisi soluta molestiae voluptates alias qui debitis voluptas, enim itaque velit amet fuga sapiente eos consequatur deserunt doloremque libero.</div>
+
+  <h1>CSS Outline</h1>
+  <h2 class="demo-outline">This is a heading 2</h2>
+
+  <h1>CSS Text</h1>
+  <h2 class="demo-text">This is a CSS text</h2>
+  <div class="demo-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laboriosam cumque ducimus quod quis facilis, beatae eos eum ratione temporibus, reprehenderit! Corporis quo, nostrum quidem hic blanditiis eveniet, itaque reprehenderit! Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Error, quis aspernatur possimus dignissimos, doloremque, itaque corrupti repellendus impedit non quo, atque ullam laboriosam animi recusandae porro? Illo ex, officia repellat!</div>
+
+  <h1>CSS Vertical Align</h1>
+  <p>This is an <img src="../img/img_avatar.png" alt="Avatar" class="a" width="5" height="5"> image</p>
+  <p>This is an <img src="../img/img_avatar.png" alt="Avatar" class="b" width="5" height="5"> image</p>
+  <p>This is an <img src="../img/img_avatar.png" alt="Avatar" class="c" width="5" height="5"> image</p>
+  <p>This is an <img src="../img/img_avatar.png" alt="Avatar" class="d" width="5" height="5"> image</p>
+  <p>This is an <img src="../img/img_avatar.png" alt="Avatar" class="e" width="5" height="5"> image</p>
+
+  <h2 class="demo-text-decoration">CSS Text Decoration</h2>
+
+  <h2 class="uppercase">uppercase uppercase</h2>
+  <h2 class="lowercase">LOWERCASE LOWERCASE</h2>
+  <h2 class="capitalize">captalize capitalize</h2>
+
+  <p class="demo-text-spacing">This is a letter spacing <br> This is a letter spacing</p>
+
+  <div class="demo-white-space">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Cumque iure doloremque, voluptates quisquam corrupti sunt nobis asperiores quae illo eum, labore natus porro consequatur, at quidem beatae id aliquid aut.</div>
+
+  <h2 class="demo-shadow">This is a text shadow</h2>
+
 
 
   <div style="margin-bottom: 500px;"></div>

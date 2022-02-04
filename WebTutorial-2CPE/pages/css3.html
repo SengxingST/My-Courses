@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Tutorial | 2CPE</title>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon|Audiowide|Trirong" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon|Audiowide|Trirong|Ubuntu|Lora" rel="stylesheet">
 
   <style>
     * {
@@ -21,12 +23,15 @@
       background-attachment: scroll;
       background-size: 100px;
 
+      counter-reset: section;
+
       /*Background Shorthand*/
       /*background: skyblue url("../img/pineapple.jpg") no-repeat right top fixed;*/
     }
     h1 {
       background-color: red;
-      opacity: 0.5;
+      color: white;
+      /*opacity: 0.5;*/
     }
     h1, h2, h3, h4 {
       text-align: center;
@@ -115,7 +120,7 @@
     }
     div.box-model {
       background-color: powderblue;
-      width: 400px;
+      width: 300px;
       border: 3px solid red;
       padding: 10px;
       margin: 50px 20px;
@@ -209,7 +214,6 @@
       background-color: white;
       text-shadow: 2px 2px 6px red;
     }
-
     p.font-ex1 { font-family: "Phetsarath OT"; }
     p.font-ex2 {
       font-family: "Ubuntu Mono";
@@ -223,7 +227,6 @@
       font-family: "mononoki Nerd Font";
       font-style: oblique;
     }
-
     h1.large {
       background-color: white;
       color: black;
@@ -244,6 +247,428 @@
     p.small {
       font-size: 18px;
       font-family: "Trirong";
+    }
+    h1.h-font-pairings {
+      background-color: white;
+      opacity: 1;
+      font-family: "Ubuntu";
+    }
+    p.body-font-pairings {
+      font-family: "Lora";
+    }
+    i {
+      font-size: 50px;
+    }
+    a { font-size: 20px; }
+    .link1 a:link {
+      color: red;
+      background-color: yellow;
+    }
+    .link1 a:visited {
+      color: green;
+      background-color: cyan;
+    }
+    .link1 a:hover {
+      color: hotpink;
+      text-decoration: none;
+      background-color: lightgreen;
+    }
+    .link1 a:active {
+      color: blue;
+      background-color: hotpink;
+    }
+    .link2 a:link, .link2 a:visited {
+      background-color: white;
+      color: black;
+      padding: 14px 25px;
+      border: 2px solid green;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .link2 a:hover, .link2 a:active {
+     background-color: green;
+     color: white;
+     cursor: pointer;
+    }
+
+    ul.a { list-style-type: circle; }
+    ul.b { list-style-type: square; }
+    ol.c { list-style-type: upper-roman; }
+    ol.d { list-style-type: lower-alpha; }
+    ul.a li {
+      border: 2px solid red;
+      list-style-position: inside;
+    }
+    ul.img { list-style-image: url("../img/list-add-icon-16.png"); }
+    ul.demo-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    table.tb1, table.tb1 th, table.tb1 td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table.tb1 { width: 100%; }
+    table.tb1 th {
+      height: 50px;
+      background-color: #04AA6D;
+      color: white;
+      text-align: center;
+    }
+    table.tb1 td {
+      text-align: left;
+      height: 30px;
+      vertical-align: center;
+      padding-left: 10px;
+      border-bottom: 3px solid green;
+    }
+    table.tb1 tr:hover {
+      background-color: bisque;
+    }
+    table.tb1 tr:nth-child(even) {
+      background-color: tomato;
+    }
+    ul.demo-display li { display: inline; }
+    div.demo-width {
+      border: 1px solid black;
+      max-width: 200px;
+    }
+
+    div.static {
+      position: static;
+      border: 5px solid tomato;
+    }
+    div.relative {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      border: 5px solid tomato;
+    }
+    div.absolute {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 200px;
+      height: 100px;
+      overflow: scroll;
+      border: 5px solid green;
+    }
+    div.fixed {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 300px;
+      border: 5px solid blue;
+    }
+    div.sticky {
+      position: sticky;
+      top: 0;
+      padding: 5px;
+      background-color: coral;
+      color: white;
+    }
+    img.z-index-demo {
+      position: absolute;
+      /*top: 0px;*/
+      /*left: 0px;*/
+      z-index: -1;
+    }
+
+    div.container { position: relative; }
+    div.topleft {
+      position: absolute;
+      /*top: 8px;*/
+      top: 50%;
+      /*bottom: 8px;*/
+      left: 16px;
+      /*text-align: center;*/
+      left: 50%;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    div.overflow-demo {
+      border: 3px solid green;
+      width: 200px;
+      height: 100px;
+      /*overflow => visible, hidden, scroll, auto*/
+      /*overflow: visible;*/
+      overflow-x: visible;
+      overflow-y: scroll;
+    }
+    p.float-demo img {
+      float: right;
+    }
+    /*div.float-demo-2 { float: left; }*/
+    div.div1 {
+      float: left;
+      width: 200px;
+      height: 200px;
+      padding: 5px;
+      background-color: red;
+    }
+    div.div2 {
+      background-color: yellow;
+      width: 200px;
+      height: 200px;
+      padding: 5px;
+      float: left;
+    }
+    div.div3 {
+      background-color: green;
+      clear: left;
+    }
+
+    div.demo-align-center {
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      border: 2px solid red;
+    }
+    img.center-img {
+      display: block;
+      margin: auto;
+    }
+    div.demo-l-r-align {
+      position: absolute;
+      right: 0px;
+      width: 300px;
+      border: 3px solid tomato;
+      padding: 10px;
+    }
+    div.demo-clearfix {
+      border: 3px solid tomato;
+      padding: 5px;
+    }
+    img.img1 { float: right; }
+    img.img2 { float: right; }
+    div.clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    div.demo-center-padding-1 {
+      padding: 70px 0;
+      border: 3px solid tomato;
+      text-align: center;
+    }
+    div.demo-center-padding-2 {
+      line-height: 200px;
+      height: 200px;
+      border: 3px solid tomato;
+    }
+    div.demo-center-padding-2 p {
+      line-height: 1.5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    div.demo-center-transform {
+      height: 200px;
+      position: relative;
+      border: 3px solid tomato;
+    }
+    div.demo-center-transform p {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    div.demo-center-flexbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      border: 3px solid tomato;
+    }
+
+    div.demo-descendant p {
+      background-color: yellow;
+      /*padding: 10px;*/
+    }
+    div.demo-child > p {
+      color: white;
+      background-color: blue;
+    }
+    div.demo-adjacent + p {
+      background-color: tomato;
+    }
+    div.demo-general ~ p {
+      /*background-color: skyblue;*/
+    }
+    h2.demo-hover {
+      text-align: left;
+    }
+    h2.demo-hover:hover {
+      background-color: yellow;
+    }
+    a.demo-link {
+      border: 3px solid tomato;
+    }
+    a.demo-link:hover {
+      background-color: green;
+      color: white;
+      text-decoration: none;
+    }
+    a.demo-link:link {
+      background-color: blue;
+      border-color: black;
+      color: white;
+    }
+    a.demo-link:visited {
+      background-color: yellow;
+      border-color: white;
+      color: black;
+    }
+    a.demo-link:active {
+      background-color: black;
+    }
+    div.demo-tooltip p {
+      display: none;
+      background-color: yellow;
+    }
+    div.demo-tooltip:hover p {
+      display: block;
+      background-color: yellow;
+    }
+
+    p.demo-first-line::first-line {
+      background-color: skyblue;
+    }
+    p.demo-first-line::first-letter {
+      color: red;
+      font-size: 100px;
+    }
+    h1.demo-before::before {
+      content: "@";
+    }
+    h1.demo-after::after {
+      content: "@";
+    }
+    ::marker {
+      color: red;
+    }
+    ::-moz-selection {
+      color: red;
+    }
+    ::-ms-selection {
+      color: red;
+    }
+    ::selection {
+      color: red;
+    }
+
+    img.demo-opacity {
+      width: 150px;
+      opacity: .5;
+    }
+    img.demo-opacity:hover {
+      opacity: 1;
+    }
+    div.demo-box-1 {
+      /*opacity: .5;*/
+      background: rgba(255, 0, 0, .3);
+    }
+
+    ul.demo-navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul.demo-navbar li {
+      display: inline;
+    }
+    ul.demo-navbar li a {
+      /*display: inline;*/
+      /*width: 500px;*/
+      background-color: #f1f1f1;
+      text-decoration: none;
+    }
+    ul.demo-navbar li a:hover {
+      background-color: #555;
+      color: white;
+    }
+
+    div.dropdown {
+      position: relative;
+      display: inline-block;
+      float: right;
+      right: 10px;
+    }
+    div.dropdown-content {
+      display: none;
+      position: absolute;
+    }
+    div.dropdown:hover div.dropdown-content {
+      display: block;
+    }
+
+    a[target=_blank] {
+      background-color: green;
+      color: white;
+    }
+
+    p[title|=Flower] {
+      color: red;
+    }
+    p[class*="te"] {
+      background-color: skyblue;
+    }
+
+    input[type=text] {
+      /*width: 100%;*/
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 3px solid red;
+      border-radius: 5px;
+      background-color: skyblue;
+      color: white;
+      background-image: url("../img/list-add-icon-16.png");
+      background-repeat: no-repeat;
+      background-position: 10px 13px;
+      transition: width 0.3s ease-in-out;
+    }
+    input[type=text]:focus {
+      /*border: 3px solid #555;*/
+      /*background-color: black;*/
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      resize: none;
+    }
+
+    .demo-counter {
+      text-align: left;
+    }
+
+    h1.counter {
+      counter-reset: subsection;
+    }
+
+    h1.counter::before {
+      counter-increment: section;
+      content: "Section " counter(section) ": ";
+    }
+    h2.demo-counter::before {
+      counter-increment: subsection;
+      content: counter(section) "." counter(subsection) " ";
+    }
+
+    h2.demo-important {
+      color: red !important;
+      text-align: left !important;
+    }
+
+    h2.demo-important {
+      color: yellow;
+      text-align: center;
     }
 
 
@@ -373,7 +798,325 @@
   <h2 class="medium font-effect-neon">Heading 2</h2>
   <p class="small">This is a paragraph.</p>
 
+  <h1>CSS Font Pairings</h1>
+  <h1 class="h-font-pairings">Merriweather and Open Sans</h1>
+  <p class="body-font-pairings">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe officiis minima, temporibus id, ipsam, consequatur magnam amet nesciunt nemo hic natus? Consequuntur deserunt assumenda, sunt dolores! Assumenda, reiciendis, ex.</p>
 
+  <h1>CSS Icons | Bootstrap</h1>
+  <i class="glyphicon glyphicon-cloud"></i>
+  <i class="glyphicon glyphicon-heart"></i>
+  <i class="glyphicon glyphicon-remove"></i>
+  <i class="glyphicon glyphicon-user"></i>
+
+  <h1>CSS Links</h1>
+  <span class="link1"><a href="https:///www.google.com">Google.com</a></span>
+  <br><br>
+  <span class="link2"><a href="https:///www.google.com">Click Me!</a></span>
+
+  <p>Mouse over the words to change the cursor.</p>
+  <span style="cursor:auto">auto</span><br>
+  <span style="cursor:crosshair">crosshair</span><br>
+  <span style="cursor:default">default</span><br>
+  <span style="cursor:e-resize">e-resize</span><br>
+  <span style="cursor:help">help</span><br>
+  <span style="cursor:move">move</span><br>
+  <span style="cursor:n-resize">n-resize</span><br>
+  <span style="cursor:ne-resize">ne-resize</span><br>
+  <span style="cursor:nw-resize">nw-resize</span><br>
+  <span style="cursor:pointer">pointer</span><br>
+  <span style="cursor:progress">progress</span><br>
+  <span style="cursor:s-resize">s-resize</span><br>
+  <span style="cursor:se-resize">se-resize</span><br>
+  <span style="cursor:sw-resize">sw-resize</span><br>
+  <span style="cursor:text">text</span><br>
+  <span style="cursor:w-resize">w-resize</span><br>
+  <span style="cursor:wait">wait</span><br>
+
+  <h1>CSS Lists</h1>
+  <ul class="a">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coke</li>
+  </ul>
+
+  <ul class="b">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coke</li>
+  </ul>
+
+  <ul class="img">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coke</li>
+  </ul>
+
+  <ul class="demo-list">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coke</li>
+  </ul>
+
+  <ol class="c">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coke</li>
+  </ol>
+
+  <ol class="d">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coke</li>
+  </ol>
+
+  <h1>CSS Tables</h1>
+  <div style="overflow-x: auto;">
+    <table class="tb1">
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Gender</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>M</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>M</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Taylor</td>
+          <td>Swift</td>
+          <td>F</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>Susan</td>
+          <td>Scallet</td>
+          <td>F</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h1>CSS Display</h1>
+  <ul class="demo-display">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+
+  <h1>CSS Max-Width</h1>
+  <div class="demo-width">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maxime reiciendis ut laboriosam pariatur doloremque eaque accusantium obcaecati, aut molestiae cumque aliquid nihil iste voluptate rerum sit, ducimus, eligendi officiis?
+  </div>
+
+  <h1>CSS Positions</h1>
+  <div class="static">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius amet corrupti obcaecati tempore quaerat inventore, qui ea? Qui fugit consectetur ipsam ratione, aspernatur totam quas quia expedita. Velit, illo, vero!</div>
+  <br>
+  <div class="relative">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magni asperiores facilis consequuntur repudiandae. Recusandae praesentium libero, excepturi quidem quam repudiandae tempora nobis esse ducimus! Repellendus vel amet officia omnis.
+    <div class="absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias non nisi animi temporibus placeat ipsum, dolores obcaecati ipsa culpa, quis soluta eos voluptate hic blanditiis repudiandae cupiditate labore mollitia quasi.</div>
+  </div>
+  <br>
+  <div class="fixed">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, dignissimos alias distinctio excepturi at esse vel iste similique, perferendis mollitia sed fugiat hic. Maxime magni, tenetur aut ex quam deleniti.</div>
+  <br>
+  <div class="sticky">CSS Sticky</div>
+  <div style="padding-bottom: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus non, possimus omnis laudantium, rerum cupiditate harum dolores beatae natus quae adipisci, nobis iure, quasi laborum fugit ipsam reprehenderit. Veritatis, explicabo.</div>
+
+  <h1>CSS z-index</h1>
+  <img class="z-index-demo" src="../img/pineapple.jpg" alt="Pineapple" width="120" height="100">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio soluta culpa sint nesciunt molestias.</p>
+
+  <br><br>
+  <h1>CSS Positioning Image</h1>
+  <div class="container">
+    <img src="../img/pineapple.jpg" alt="Pineapple" width="200" height="200">
+    <div class="topleft">Top Left | Bottom Left | Center</div>
+  </div>
+
+  <h1>CSS Overflow</h1>
+  <div class="overflow-demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptateipsam veritatis libero.</div>
+
+  <h1>CSS Float</h1>
+  <p class="float-demo"><img src="../img/pineapple.jpg" alt="Pineapple" style="width:50px; height:50px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore debitis deleniti earum at alias cupiditate quo corporis voluptas placeat molestiae doloribus ut aperiam, officiis adipisci, quaerat. Ipsam quo, sint nesciunt.</p>
+
+  <div class="float-demo-2 div1">Div 1 Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Aliquam, nihil, doloremque mollitia repellat eius voluptatibus magni ex quod, fuga ad praesentium eum, voluptas esse excepturi corrupti molestias. Nulla, incidunt, debitis.</div>
+  <div class="float-demo-2 div2">Div 2 Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Saepe, facere et ratione alias amet dolorum. Dicta inventore rem fugiat a. Cumque ipsa eius iste rerum ullam blanditiis voluptas exercitationem quaerat.</div>
+  <div class="float-demo-2 div3">Div 3</div>
+
+  <h1>CSS Align</h1>
+  <div class="demo-align-center">
+    <p>Hello World!</p>
+  </div>
+  <br><br>
+  <img src="../img/paris.jpg" alt="Paris" class="center-img" width="50%">
+  <br><br>
+  <div class="demo-l-r-align">
+    <p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Ea libero facilis quaerat nemo perferendis odit nisi ut corporis quas similique? Ducimus doloremque sunt modi ea. Illo, itaque sunt aspernatur dolorem.</p>
+  </div>
+
+  <div class="demo-clearfix" style="margin-top: 200px;">
+    <img class="img1" src="../img/pineapple.jpg" alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum... Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Adipisci rem pariatur explicabo omnis vitae, cum earum. Cumque soluta quaerat esse, et enim, magni unde cum. Illo eveniet impedit eaque laudantium.
+  </div>
+
+  <p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+  <div class="demo-clearfix clearfix">
+    <img class="img2" src="../img/pineapple.jpg" alt="Pineapple" width="170" height="170">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia itaque, eos at consectetur veritatis asperiores nobis, totam tenetur quidem possimus, vel nisi vero molestias nam minus reprehenderit facere. Eaque, laboriosam.
+  </div>
+
+  <br><br>
+  <div class="demo-center-padding-1">
+    <p>Center Vertically Using Padding</p>
+  </div>
+
+  <br><br>
+
+  <div class="demo-center-padding-2">
+    <p>Center Veritcally Using Line-Height</p>
+  </div>
+
+  <br><br>
+
+  <div class="demo-center-transform">
+    <p>Center Veritcally Using Positon and Transform</p>
+  </div>
+
+  <br><br>
+
+  <div class="demo-center-flexbox">
+    <p>Center Vertically Using Flexbox</p>
+  </div>
+
+  <h1>CSS Combinators</h1>
+  <div class="demo-descendant">
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+    <section><p>This is a paragraph.</p></section>
+  </div>
+
+  <div class="demo-child">
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+    <section><p>This is a paragraph.</p></section>
+    <p>This is a paragraph.</p>
+  </div>
+  <div class="demo-adjacent">
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+    <section><p>This is a paragraph.</p></section>
+  </div>
+  <p>This is a outside paragraph.</p>
+  <p>This is a outside paragraph.</p>
+  <div class="demo-adjacent">
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+    <section><p>This is a paragraph.</p></section>
+  </div>
+  <p>This is a outside paragraph.</p>
+  <p>This is a outside paragraph.</p>
+  <div class="demo-general">
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+    <section><p>This is a paragraph.</p></section>
+  </div>
+  <p>This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+  <h1>CSS Pseudo-Class</h1>
+  <h2 class="demo-hover">Mouse hover me!!</h2>
+  <a href="https://www.google.com" class="demo-link">Click Me!!</a>
+  <br><br>
+  <div class="demo-tooltip">Mouse hover me!!!
+    <p>This is the content.</p>
+  </div>
+  <br><br>
+  <p class="demo-first-line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste nihil repellendus architecto, cum fuga officia quia possimus, modi quo adipisci natus vero voluptatum quae velit assumenda distinctio aliquid hic deserunt.</p>
+
+  <h1 class="demo-before">Pseudo Class Before</h1>
+  <h1 class="demo-after">Pseudo Class After</h1>
+
+  <ul class="demo-marker">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+  </ul>
+
+  <h1>CSS Opacity</h1>
+  <img src="../img/img_forest.jpg" alt="" class="demo-opacity">
+
+  <div class="demo-box-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, cumque, quos. Incidunt inventore quibusdam cupiditate, corrupti libero, aperiam accusamus quod, quo voluptatem pariatur numquam doloribus magnam iste officia est odio!</div>
+
+
+  <h1>Navbar List of Links</h1>
+  <ul class="demo-navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <h1>CSS Dropdown</h1>
+  <div class="dropdown">
+    <button>Dropdown Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+
+  <h1>CSS Attr Selectors</h1>
+  <a href="#" target="_blank">Link 1</a>
+  <a href="#" target="_top">Link 2</a>
+  <a href="#" target="_blank">Link 3</a>
+  <a href="#">Link 4</a>
+
+  <br><br>
+
+  <p class="first_test" title="Flower">Flowers</p>
+  <p class="second" title="Flower-two">Flower two</p>
+  <p class="my-test" title="Flowerthree">Flower three</p>
+
+  <h1>CSS Forms</h1>
+  <form action="#" class="demo-form">
+    <label for="fname">Firs Name: </label> <br>
+    <input type="text" name="fname" id="fname"> <br>
+    <textarea name="comment" id="comment"></textarea>
+  </form>
+
+  <h1>CSS Counters</h1>
+  <h1 class="counter">Using CSS Counters:</h1>
+  <h2 class="demo-counter">HTML Tutorial</h2>
+  <h2 class="demo-counter">CSS Tutorial</h2>
+  <h2 class="demo-counter">JavaScript Tutorial</h2>
+
+  <h1 class="counter">Using CSS Counters:</h1>
+  <h2 class="demo-counter">HTML Tutorial</h2>
+  <h2 class="demo-counter">CSS Tutorial</h2>
+  <h2 class="demo-counter">JavaScript Tutorial</h2>
+
+  <h1 class="counter">Using CSS Counters:</h1>
+  <h2 class="demo-counter">HTML Tutorial</h2>
+  <h2 class="demo-counter">CSS Tutorial</h2>
+  <h2 class="demo-counter">JavaScript Tutorial</h2>
+
+  <h2 class="demo-important">This is a heading 2.1</h2>
+  <h2 class="demo-important">This is a heading 2.2</h2>
 
   <div style="margin-bottom: 800px;"></div>
 </body>
